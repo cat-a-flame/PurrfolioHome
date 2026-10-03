@@ -57,7 +57,7 @@
 <div class="callout"><span class="ico">🐾</span><div>Purrfolio stores the financial records <strong>you</strong> choose to enter so it can show them back to you. We don't show ads, we don't sell or rent your data, we don't use third-party analytics or tracking SDKs, and we never connect to your bank. You can delete your account and all of its data at any time.</div></div>
 
 <h2 id="who">Who we are</h2>
-<p>Purrfolio (“Purrfolio”, “we”, “us”) is a personal expense-tracking application available on iOS, Android and the web, developed and operated by Stefánia Péter, who is the data controller responsible for your personal data under this policy.</p>
+<p>Purrfolio (“Purrfolio”, “we”, “us”) is a personal expense-tracking application available on Android and the web, developed and operated by Stefánia Péter, who is the data controller responsible for your personal data under this policy.</p>
 <p>This policy applies to the Purrfolio mobile apps, the Purrfolio web app and this website (together, the “Service”).</p>
 
 <h2 id="collect">Data we collect</h2>
@@ -65,6 +65,7 @@
 <ul>
   <li><strong>Account information</strong> — your email address and a password. Passwords are handled by our authentication provider and stored only as a salted hash; we can never see them.</li>
   <li><strong>Financial records you enter</strong> — accounts (name, type, currency, starting balance, icon and colour), transactions (amount, date, account, category, notes, payer name, labels), transfers, categories, labels and planned/recurring payments.</li>
+  <li><strong>Purchase information</strong> — if you buy a paid feature or subscription, the app store tells us the product, purchase status, renewal/expiry dates and an order or transaction identifier so we can unlock the feature. Payments are processed entirely by Google Play (or Apple); we never receive your card number or billing details.</li>
   <li><strong>Imported files</strong> — if you use CSV import, the file is read and parsed on your device. Only the transactions you confirm are saved to your account; the original file is not uploaded or kept.</li>
   <li><strong>Support messages</strong> — if you email us, we receive your email address and whatever you include in your message.</li>
 </ul>
@@ -74,7 +75,7 @@
   <li><strong>On-device preferences</strong> — your theme choice and the “hide numbers” setting are stored locally on your device (for example in local storage). They are not sent to us.</li>
 </ul>
 <h3>What we don't collect</h3>
-<p>We do not collect your bank login credentials, payment card numbers, precise location, contacts, photos, health data or advertising identifiers. We do not use cookies or similar technologies for advertising or cross-site tracking. Only strictly necessary storage is used to keep you signed in.</p>
+<p>We do not collect your bank login credentials, payment card numbers (payments are handled by the app store), precise location, contacts, photos, health data or advertising identifiers. We do not use cookies or similar technologies for advertising or cross-site tracking. Only strictly necessary storage is used to keep you signed in.</p>
 
 <h2 id="use">How we use your data</h2>
 <ul>
@@ -83,6 +84,7 @@
   <li>To calculate balances, statistics, comparisons and predictions shown in the app.</li>
   <li>To convert amounts between currencies using reference exchange rates.</li>
   <li>To send essential service emails (for example, sign-up confirmation or password reset).</li>
+  <li>To provide, verify and restore paid features or subscriptions you have purchased.</li>
   <li>To respond to your support requests.</li>
   <li>To keep the Service secure, prevent abuse and fix bugs.</li>
 </ul>
@@ -104,7 +106,7 @@
     <tr><td>Supabase</td><td>Authentication, database and backend hosting</td><td>Account info, financial records, technical logs</td></tr>
     <tr><td>Netlify</td><td>Hosting of the web app and this website</td><td>Technical logs (e.g. IP address)</td></tr>
     <tr><td>Frankfurter (European Central Bank reference rates)</td><td>Currency exchange rates</td><td>None — rates are fetched by our server; no personal data is sent</td></tr>
-    <tr><td>Apple App Store / Google Play</td><td>App distribution</td><td>Governed by Apple's and Google's own privacy policies</td></tr>
+    <tr><td>Google Play (and Apple App Store, where applicable)</td><td>App distribution and payment processing for paid features</td><td>Purchase status and order/transaction ID. Payment details are handled under Google's (or Apple's) own privacy policy</td></tr>
   </tbody>
 </table>
 <p>We may also disclose information if required by law, to protect the rights and safety of our users or others, or as part of a merger or transfer of the Service (in which case this policy will continue to apply to your data).</p>
@@ -116,6 +118,7 @@
 <ul>
   <li>Your account and financial records are kept for as long as your account exists.</li>
   <li>When you delete your account, your account and all associated records are permanently deleted from our production database within <strong>30 days</strong>. Encrypted backups are overwritten on a rolling basis and purged within a further 30 days.</li>
+  <li>Records of purchases (product, date, amount and transaction ID) are kept for as long as tax and accounting laws require, even after account deletion.</li>
   <li>Support emails are kept for up to 24 months, then deleted.</li>
   <li>Technical logs are kept only as long as our providers' standard retention periods (typically a few days to a few weeks).</li>
 </ul>
@@ -186,7 +189,7 @@
       </div>
       <div class="footer-bottom">
         <span>© <span id="year">2026</span> Purrfolio. All rights reserved.</span>
-        <span>Apple and App Store are trademarks of Apple Inc. Google Play is a trademark of Google LLC.</span>
+        <span>Google Play and the Google Play logo are trademarks of Google LLC.</span>
       </div>
     </div>
   </footer>

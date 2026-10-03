@@ -6,9 +6,9 @@ Plain HTML/CSS/JS — no build step.
 | Page | Path | Used for |
 | --- | --- | --- |
 | Landing | `/` | Marketing URL |
-| Privacy Policy | `/privacy.html` | App Store Connect & Google Play privacy policy URL |
+| Privacy Policy | `/privacy.html` | Google Play privacy policy URL |
 | Terms of Use | `/terms.html` | EULA / terms link |
-| Support | `/support.html` | App Store Connect support URL |
+| Support | `/support.html` | Support URL |
 | Delete account | `/delete-account.html` | Google Play "account deletion" URL |
 | Not found | `/404.html` | Netlify / GitHub Pages 404 |
 
@@ -27,4 +27,4 @@ extension-less aliases (`/privacy`, `/terms`, `/support`, `/delete-account`).
 ## Before launch
 
 - Replace `support@purrfolio.app` / `privacy@purrfolio.app` with real inboxes.
-- Point the App Store / Google Play buttons (`href="#download"`) at the real store listings.
+- Point the Google Play buttons (`href="#download"`) at the real store listings.
