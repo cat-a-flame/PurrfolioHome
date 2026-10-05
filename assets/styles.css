@@ -139,7 +139,7 @@ p { margin: 0; }
 .brand img { width: 38px; height: 38px; border-radius: 12px; background: #fff; padding: 3px; box-shadow: 0 6px 20px -6px rgba(167, 139, 250, 0.7); }
 .brand span { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; color: var(--text); letter-spacing: -0.01em; }
 
-.nav-links { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
+.nav-links { display: flex; align-items: center; gap: 12px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
   text-decoration: none; color: var(--text-soft); font-weight: 600; font-size: 0.95rem;
   padding: 8px 14px; border-radius: 999px; transition: color 0.2s, background 0.2s;
@@ -147,7 +147,7 @@ p { margin: 0; }
 .nav-links a:not(.btn):hover, .nav-links a[aria-current="page"] { color: var(--text); background: var(--surface-strong); }
 .nav-links .btn { padding: 10px 16px; }
 .nav-links .btn-primary { color: #fff; }
-.nav-links .btn-ghost { color: var(--text); margin-left: 6px; }
+.nav-links .btn-ghost { color: var(--text); }
 
 .nav-toggle {
   display: none; background: var(--surface-strong); border: 1px solid var(--border); color: var(--text);
