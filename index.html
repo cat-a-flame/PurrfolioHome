@@ -6,6 +6,7 @@
   <title>Purrfolio — The purr-fectly simple expense tracker</title>
   <meta name="description" content="Purrfolio is a friendly, private expense tracker. Log spending in seconds, plan recurring payments, track every account and currency, and see where your money goes.">
   <meta name="theme-color" content="#0a0614">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)})();</script>
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
@@ -36,13 +37,8 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="./" aria-current="page">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#privacy">Privacy</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a class="btn btn-ghost btn-sm" href="https://my.purrfolio.app">Web app</a></li>
-        <li><a class="btn btn-primary btn-sm" href="#download">Get the app</a></li>
+        <li><a class="btn btn-ghost btn-sm" href="https://my.purrfolio.app/login">Log in</a></li>
+        <li><a class="btn btn-primary btn-sm" href="https://my.purrfolio.app/signup">Sign up</a></li>
       </ul>
     </nav>
   </header>
@@ -67,9 +63,9 @@
             </a>
           </div>
           <div class="hero-meta">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Free to use</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No ads, ever</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No trackers</span>
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Dark mode included</span>
           </div>
         </div>
 
@@ -86,56 +82,82 @@
           </div>
 
           <div class="phone">
-            <div class="phone-screen">
+            <div class="phone-screen app">
               <div class="phone-notch"></div>
-              <div class="app-head">
+
+              <div class="app-bar">
+                <span class="app-icon-btn"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
                 <h4>Dashboard</h4>
-                <img class="avatar" src="assets/logo.png" alt="">
+                <span class="app-bar-side"></span>
               </div>
-              <div class="net-card">
-                <small>Net worth</small>
-                <div class="amount">€24,860.50</div>
-                <div class="row">
-                  <div class="chip">Income<b>+€3,420</b></div>
-                  <div class="chip">Spent<b>−€1,875</b></div>
+
+              <div class="app-scroll">
+                <div class="app-period">
+                  <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+                  <b>This month <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></b>
+                  <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
                 </div>
-              </div>
-              <div class="mini-card">
-                <h5>Spending by category</h5>
-                <div class="stack-bar">
-                  <i style="flex:34;background:#a78bfa"></i>
-                  <i style="flex:22;background:#f472b6;animation-delay:.1s"></i>
-                  <i style="flex:18;background:#22d3ee;animation-delay:.2s"></i>
-                  <i style="flex:14;background:#fbbf24;animation-delay:.3s"></i>
-                  <i style="flex:12;background:#34d399;animation-delay:.4s"></i>
+
+                <div class="app-cashflow">
+                  <span class="cf-pill"><i></i>Cash Flow</span>
+                  <div class="cf-top">
+                    <div>
+                      <small>This month</small>
+                      <strong>+€1,284.50</strong>
+                    </div>
+                    <div class="cf-vs">
+                      <small>vs previous</small>
+                      <span>↑ 12%</span>
+                    </div>
+                  </div>
+                  <div class="cf-bar">
+                    <div class="cf-row"><span>Income</span><b>+€3,420.00</b></div>
+                    <div class="cf-track"><i class="inc" style="--w:62%"></i></div>
+                  </div>
+                  <div class="cf-bar">
+                    <div class="cf-row"><span>Expenses</span><b>−€2,135.50</b></div>
+                    <div class="cf-track"><i class="exp" style="--w:38%"></i></div>
+                  </div>
                 </div>
-                <div class="legend">
-                  <span style="--c:#a78bfa">Home</span>
-                  <span style="--c:#f472b6">Food</span>
-                  <span style="--c:#22d3ee">Travel</span>
-                  <span style="--c:#fbbf24">Fun</span>
-                  <span style="--c:#34d399">Health</span>
-                </div>
-              </div>
-              <div class="mini-card">
-                <h5>Recent</h5>
-                <div class="tx">
-                  <span class="emoji" style="--bg-c: rgba(244,114,182,.18)">🍣</span>
-                  <span class="meta"><b>Sushi night</b><span>Food · Today</span></span>
+
+                <div class="app-day"><span>October 4, 2026</span><b class="neg">−€60.90</b></div>
+                <div class="app-tx">
+                  <span class="emoji">🍣</span>
+                  <span class="meta"><b>Restaurants</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>OTP Bank</span></span>
                   <span class="val neg">−€42.00</span>
                 </div>
-                <div class="tx">
-                  <span class="emoji" style="--bg-c: rgba(52,211,153,.18)">💼</span>
-                  <span class="meta"><b>Salary</b><span>Income · Yesterday</span></span>
-                  <span class="val pos">+€3,420</span>
-                </div>
-                <div class="tx">
-                  <span class="emoji" style="--bg-c: rgba(251,191,36,.18)">🐟</span>
-                  <span class="meta"><b>Cat food</b><span>Pets · Mon</span></span>
+                <div class="app-tx">
+                  <span class="emoji">🐟</span>
+                  <span class="meta"><b>Pets</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Revolut</span></span>
                   <span class="val neg">−€18.90</span>
                 </div>
+                <div class="app-day"><span>October 3, 2026</span><b class="pos">+€3,415.50</b></div>
+                <div class="app-tx">
+                  <span class="emoji">💼</span>
+                  <span class="meta"><b>Salary</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>OTP Bank</span></span>
+                  <span class="val pos">+€3,420.00</span>
+                </div>
+                <div class="app-tx">
+                  <span class="emoji">☕</span>
+                  <span class="meta"><b>Coffee</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Cash</span></span>
+                  <span class="val neg">−€4.50</span>
+                </div>
               </div>
-              <div class="phone-nav"><i></i><i></i><span class="add">+</span><i></i><i></i></div>
+
+              <div class="app-tabbar">
+                <svg class="app-pill"><path/></svg>
+                <div class="app-tabs">
+                  <span class="tab is-active"><svg viewBox="0 0 24 24" class="fill"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Records</span>
+                  <span class="tab-gap"></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Planned</span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M5 20V12M10 20V5M15 20v-9M20 20V8"/></svg>Stats</span>
+                </div>
+                <div class="app-fab-wrap">
+                  <svg class="app-ears" viewBox="0 0 56 26"><path d="M 2 26 L 9 9 Q 13 1 17 9 L 24 26 Z" transform="rotate(-28, 13, 26)"/><path d="M 32 26 L 39 9 Q 43 1 47 9 L 54 26 Z" transform="rotate(28, 43, 26)"/></svg>
+                  <span class="app-fab"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,9 +175,9 @@
 
         <div class="bento">
           <article class="tile wide reveal">
-            <div class="tile-icon" style="--bg-c: rgba(167,139,250,.18)">🏦</div>
+            <div class="tile-icon" style="--bg-c: rgba(167,139,250,.18)">👛</div>
             <h3>All your accounts, one net worth</h3>
-            <p>Bank accounts, cash, savings, credit cards, investments, bonds and even crypto — grouped by type and rolled up into a single, satisfying net worth bar.</p>
+            <p>Add every account you keep track of — everyday spending, cash, savings, credit cards, investments, bonds and even crypto — grouped by type and rolled up into a single, satisfying net worth bar.</p>
             <div class="tile-visual">
               <div class="net-bar">
                 <i style="flex:38;background:#a78bfa"></i>
@@ -165,7 +187,7 @@
                 <i style="flex:8;background:#34d399"></i>
               </div>
               <div class="accounts-legend">
-                <span>🏦 Bank <b>€9,420</b></span>
+                <span>💳 Everyday <b>€9,420</b></span>
                 <span>🐷 Savings <b>€5,960</b></span>
                 <span>📈 Investments <b>€4,480</b></span>
                 <span>📜 Bonds <b>€2,980</b></span>
@@ -183,7 +205,7 @@
           <article class="tile sm-half reveal">
             <div class="tile-icon" style="--bg-c: rgba(34,211,238,.18)">🌍</div>
             <h3>Multi-currency</h3>
-            <p>Hold accounts in different currencies. Live exchange rates keep your totals honest.</p>
+            <p>Hold accounts in different currencies. Live exchange rates keep your totals honest, and more currencies are on the way.</p>
             <div class="tile-visual fx">
               <div><b>€</b><span>EUR</span></div>
               <div><b>$</b><span>USD</span></div>
@@ -205,14 +227,14 @@
           <article class="tile half reveal">
             <div class="tile-icon" style="--bg-c: rgba(52,211,153,.18)">🏷️</div>
             <h3>Categories &amp; labels, your way</h3>
-            <p>Emoji-powered categories with subcategories and custom colours, plus free-form labels for trips, projects or that one wedding.</p>
+            <p>Create as many categories, subcategories and labels as you like — no limits. Give each one an emoji and a colour, and use labels for trips, projects or that one wedding.</p>
             <ul><li>🍕 Food › Takeaway</li><li>✈️ #japan-2026</li><li>🐱 Pets</li><li>#shared</li></ul>
           </article>
 
           <article class="tile half reveal" style="--d:.08s">
             <div class="tile-icon" style="--bg-c: rgba(167,139,250,.18)">📥</div>
-            <h3>Import from your bank</h3>
-            <p>Bring your history with you. Drop in a CSV export — Purrfolio detects delimiters, dates and amount formats, then lets you map the columns.</p>
+            <h3>Import from a CSV file</h3>
+            <p>Bring your history with you. Export a CSV from your bank or your old app and drop it in.</p>
             <div class="tile-visual csv">
               <div><span class="hl">date;description;amount</span></div>
               <div>2026.09.28;Coffee corner;-4,50</div>
@@ -221,23 +243,6 @@
             </div>
           </article>
 
-          <article class="tile sm-half reveal">
-            <div class="tile-icon" style="--bg-c: rgba(244,114,182,.18)">🙈</div>
-            <h3>Hide the numbers</h3>
-            <p>Checking your balance on the bus? One tap blurs every amount on your dashboard.</p>
-          </article>
-
-          <article class="tile sm-half reveal" style="--d:.08s">
-            <div class="tile-icon" style="--bg-c: rgba(34,211,238,.18)">🌙</div>
-            <h3>Gorgeous in the dark</h3>
-            <p>Light and dark themes that follow your system — easy on the eyes at midnight.</p>
-          </article>
-
-          <article class="tile sm-half reveal" style="--d:.16s">
-            <div class="tile-icon" style="--bg-c: rgba(251,191,36,.18)">🔄</div>
-            <h3>Transfers that add up</h3>
-            <p>Move money between accounts — even across currencies — without double-counting.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -297,33 +302,52 @@
 
         <div class="split reverse">
           <div class="split-media reveal">
-            <div class="panel">
-              <div class="panel-title"><h4>Expected expenses</h4><span>Next 30 days</span></div>
-              <div class="predict">
-                <div class="predict-item">
+            <div class="predict-stack">
+              <div class="panel predict-panel">
+                <div class="predict-banner exp"><span class="ico">↓</span><h4>Expected expenses</h4><span class="period">October</span></div>
+                <div class="predict-row">
                   <span class="emoji" style="--bg-c: rgba(167,139,250,.18)">🏠</span>
-                  <div><b>Rent</b><span>Monthly · Oct 1</span></div>
-                  <strong>€950.00</strong>
+                  <div class="main"><b>Rent</b><span>seen 6 of 6 months</span></div>
+                  <div class="conf"><span>98% sure</span><i style="--w:98%"></i></div>
+                  <div class="amt"><b class="val neg">−€950.00</b><span>stable</span></div>
                 </div>
-                <div class="predict-item">
+                <div class="predict-row">
                   <span class="emoji" style="--bg-c: rgba(244,114,182,.18)">🛒</span>
-                  <div><b>Groceries</b><span>Based on your habits</span></div>
-                  <strong>~€410</strong>
+                  <div class="main"><b>Groceries</b><span>38 entries / 6 months</span></div>
+                  <div class="conf"><span>81% sure</span><i style="--w:81%"></i></div>
+                  <div class="amt"><b class="val neg">−€412.30</b><span>€360 – €470</span></div>
                 </div>
-                <div class="predict-item">
+                <div class="predict-row">
                   <span class="emoji" style="--bg-c: rgba(34,211,238,.18)">💡</span>
-                  <div><b>Utilities</b><span>Quarterly · Oct 15</span></div>
-                  <strong>€186.40</strong>
+                  <div class="main"><b>Utilities</b><span>seen 4 of 6 months</span></div>
+                  <div class="conf"><span>64% sure</span><i style="--w:64%"></i></div>
+                  <div class="amt"><b class="val neg">−€86.20</b><span>€62 – €118</span></div>
+                </div>
+              </div>
+              <div class="panel predict-panel">
+                <div class="predict-banner inc"><span class="ico">↑</span><h4>Expected income</h4><span class="period">October</span></div>
+                <div class="predict-row">
+                  <span class="emoji" style="--bg-c: rgba(52,211,153,.18)">💼</span>
+                  <div class="main"><b>Salary</b><span>seen 6 of 6 months</span></div>
+                  <div class="conf inc"><span>99% sure</span><i style="--w:99%"></i></div>
+                  <div class="amt"><b class="val pos">+€3,420.00</b><span>stable</span></div>
+                </div>
+                <div class="predict-row">
+                  <span class="emoji" style="--bg-c: rgba(251,191,36,.18)">🧾</span>
+                  <div class="main"><b>Freelance</b><span>seen 3 of 6 months</span></div>
+                  <div class="conf inc"><span>41% sure</span><i style="--w:41%"></i></div>
+                  <div class="amt"><b class="val pos">+€380.00</b><span>€150 – €620</span></div>
                 </div>
               </div>
             </div>
           </div>
           <div class="reveal" style="--d:.1s">
-            <h3>A peek into next month</h3>
-            <p>Purrfolio looks at your planned payments and your spending patterns to forecast what's coming — both money going out and money coming in. No surprises, just a cat-like sixth sense for your budget.</p>
+            <h3>A peek at what's ahead</h3>
+            <p>Pick any period and Purrfolio tries to predict the expenses and income you can expect in it. It learns from your last six months, category by category, and tells you how sure it is about each guess. No crystal ball, just a cat-like sixth sense for your budget.</p>
             <ul class="checks">
-              <li>Expected expenses and expected income</li>
-              <li>Built from your recurring payments and real history</li>
+              <li>Expected expenses and expected income for the selected period</li>
+              <li>Learned from your own history, not generic averages</li>
+              <li>A confidence score and typical range for every estimate</li>
               <li>Spot a tight month before it happens</li>
             </ul>
           </div>
@@ -339,8 +363,8 @@
           <h2>Up and running in <span class="gradient-text">three purrs.</span></h2>
         </div>
         <div class="steps">
-          <div class="step reveal"><h3>Create your account</h3><p>Sign up with your email — no bank login required, ever.</p></div>
-          <div class="step reveal" style="--d:.08s"><h3>Add your accounts</h3><p>Set up your bank, cash and savings with their starting balances, or import a CSV.</p></div>
+          <div class="step reveal"><h3>Create your account</h3><p>Sign up with your email. No bank details needed — Purrfolio never connects to your bank.</p></div>
+          <div class="step reveal" style="--d:.08s"><h3>Add your accounts</h3><p>Add your accounts — cash, savings, cards and more — by hand with their starting balances, or import a CSV file.</p></div>
           <div class="step reveal" style="--d:.16s"><h3>Log &amp; relax</h3><p>Add transactions as you go and let Purrfolio do the maths, the charts and the reminders.</p></div>
         </div>
       </div>
@@ -379,7 +403,7 @@
           </details>
           <details>
             <summary>Does Purrfolio connect to my bank?</summary>
-            <p>No. Purrfolio never asks for your bank credentials. You add transactions yourself or import a CSV export from your bank — you stay in full control of what goes in.</p>
+            <p>No, and it never will. Connecting to banks brings real security risks, and Purrfolio is a hobby project built by one person, so bank connections are deliberately left out. You add transactions yourself or import a CSV file you've exported — you stay in full control of what goes in. <a href="about.html" style="color:var(--violet)">More about Purrfolio</a>.</p>
           </details>
           <details>
             <summary>Which currencies are supported?</summary>
@@ -435,8 +459,7 @@
         <div>
           <h4>Product</h4>
           <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./#features">Features</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="./#faq">FAQ</a></li>
             <li><a href="https://my.purrfolio.app">Web app</a></li>
           </ul>
