@@ -55,10 +55,15 @@
   var systemLight = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
   var themeBtn = document.createElement('button');
   themeBtn.type = 'button';
-  themeBtn.className = 'theme-toggle';
+  themeBtn.className = 'theme-switch';
+  themeBtn.setAttribute('role', 'switch');
+  themeBtn.setAttribute('aria-label', 'Dark mode');
   themeBtn.innerHTML =
-    '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>' +
-    '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+    '<span class="ts-track" aria-hidden="true">' +
+      '<span class="ts-stars"><i></i><i></i><i></i><i></i><i></i></span>' +
+      '<span class="ts-clouds"><i></i><i></i></span>' +
+      '<span class="ts-knob"><i></i><i></i><i></i></span>' +
+    '</span>';
   document.body.appendChild(themeBtn);
 
   function savedTheme() {
@@ -67,7 +72,7 @@
   function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
     if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f7f3fe' : '#0a0614');
-    themeBtn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    themeBtn.setAttribute('aria-checked', String(theme === 'dark'));
   }
   applyTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
 
