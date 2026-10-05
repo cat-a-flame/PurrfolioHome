@@ -82,56 +82,78 @@
           </div>
 
           <div class="phone">
-            <div class="phone-screen">
+            <div class="phone-screen app">
               <div class="phone-notch"></div>
-              <div class="app-head">
+
+              <div class="app-bar">
+                <span class="app-icon-btn"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
                 <h4>Dashboard</h4>
-                <img class="avatar" src="assets/logo.png" alt="">
+                <span class="app-bar-side"></span>
               </div>
-              <div class="net-card">
-                <small>Net worth</small>
-                <div class="amount">€24,860.50</div>
-                <div class="row">
-                  <div class="chip">Income<b>+€3,420</b></div>
-                  <div class="chip">Spent<b>−€1,875</b></div>
+
+              <div class="app-scroll">
+                <div class="app-period">
+                  <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+                  <b>This month <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></b>
+                  <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
+
+                <div class="app-cashflow">
+                  <span class="cf-pill"><i></i>Cash Flow</span>
+                  <div class="cf-top">
+                    <div>
+                      <small>This month</small>
+                      <strong>+312&nbsp;450&nbsp;Ft</strong>
+                    </div>
+                    <div class="cf-vs">
+                      <small>vs previous</small>
+                      <span>↑ 12%</span>
+                    </div>
+                  </div>
+                  <div class="cf-bar">
+                    <div class="cf-row"><span>Income</span><b>+845&nbsp;000&nbsp;Ft</b></div>
+                    <div class="cf-track"><i class="inc" style="--w:61%"></i></div>
+                  </div>
+                  <div class="cf-bar">
+                    <div class="cf-row"><span>Expenses</span><b>−532&nbsp;550&nbsp;Ft</b></div>
+                    <div class="cf-track"><i class="exp" style="--w:39%"></i></div>
+                  </div>
+                </div>
+
+                <div class="app-day"><span>October 4, 2026</span><b class="neg">−12&nbsp;480&nbsp;Ft</b></div>
+                <div class="app-tx">
+                  <span class="emoji">🍣</span>
+                  <span class="meta"><b>Restaurants</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>OTP Bank</span></span>
+                  <span class="val neg">−8&nbsp;990&nbsp;Ft</span>
+                </div>
+                <div class="app-tx">
+                  <span class="emoji">🐟</span>
+                  <span class="meta"><b>Pets</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Revolut</span></span>
+                  <span class="val neg">−3&nbsp;490&nbsp;Ft</span>
+                </div>
+                <div class="app-day"><span>October 3, 2026</span><b class="pos">+643&nbsp;800&nbsp;Ft</b></div>
+                <div class="app-tx">
+                  <span class="emoji">💼</span>
+                  <span class="meta"><b>Salary</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>OTP Bank</span></span>
+                  <span class="val pos">+645&nbsp;000&nbsp;Ft</span>
+                </div>
+                <div class="app-tx">
+                  <span class="emoji">☕</span>
+                  <span class="meta"><b>Coffee</b><span><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h13v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Cash</span></span>
+                  <span class="val neg">−1&nbsp;200&nbsp;Ft</span>
                 </div>
               </div>
-              <div class="mini-card">
-                <h5>Spending by category</h5>
-                <div class="stack-bar">
-                  <i style="flex:34;background:#a78bfa"></i>
-                  <i style="flex:22;background:#f472b6;animation-delay:.1s"></i>
-                  <i style="flex:18;background:#22d3ee;animation-delay:.2s"></i>
-                  <i style="flex:14;background:#fbbf24;animation-delay:.3s"></i>
-                  <i style="flex:12;background:#34d399;animation-delay:.4s"></i>
+
+              <div class="app-tabbar">
+                <div class="app-tabs">
+                  <span class="tab is-active"><svg viewBox="0 0 24 24" class="fill"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>Records</span>
+                  <span class="tab-gap"></span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Planned</span>
+                  <span class="tab"><svg viewBox="0 0 24 24"><path d="M5 20V12M10 20V5M15 20v-9M20 20V8"/></svg>Stats</span>
                 </div>
-                <div class="legend">
-                  <span style="--c:#a78bfa">Home</span>
-                  <span style="--c:#f472b6">Food</span>
-                  <span style="--c:#22d3ee">Travel</span>
-                  <span style="--c:#fbbf24">Fun</span>
-                  <span style="--c:#34d399">Health</span>
-                </div>
+                <span class="app-fab"><i class="ear l"></i><i class="ear r"></i><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
               </div>
-              <div class="mini-card">
-                <h5>Recent</h5>
-                <div class="tx">
-                  <span class="emoji" style="--bg-c: rgba(244,114,182,.18)">🍣</span>
-                  <span class="meta"><b>Sushi night</b><span>Food · Today</span></span>
-                  <span class="val neg">−€42.00</span>
-                </div>
-                <div class="tx">
-                  <span class="emoji" style="--bg-c: rgba(52,211,153,.18)">💼</span>
-                  <span class="meta"><b>Salary</b><span>Income · Yesterday</span></span>
-                  <span class="val pos">+€3,420</span>
-                </div>
-                <div class="tx">
-                  <span class="emoji" style="--bg-c: rgba(251,191,36,.18)">🐟</span>
-                  <span class="meta"><b>Cat food</b><span>Pets · Mon</span></span>
-                  <span class="val neg">−€18.90</span>
-                </div>
-              </div>
-              <div class="phone-nav"><i></i><i></i><span class="add">+</span><i></i><i></i></div>
             </div>
           </div>
         </div>
