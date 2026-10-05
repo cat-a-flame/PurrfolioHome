@@ -635,9 +635,9 @@ p { margin: 0; }
   background: var(--paw) center / 15px no-repeat, var(--gradient);
 }
 
-/* Paw prints left behind by the pointer on the 404 page and footers (main.js) */
+/* Paw prints left behind by the mouse pointer (main.js) */
 .paw-print {
-  position: fixed; left: 0; top: 0; width: 16px; height: 16px; margin: -8px 0 0 -8px; pointer-events: none; z-index: 60;
+  position: fixed; left: 0; top: 0; width: 16px; height: 16px; margin: -8px 0 0 -8px; pointer-events: none; z-index: 60; contain: strict;
   background: var(--violet); -webkit-mask: var(--paw) center / contain no-repeat; mask: var(--paw) center / contain no-repeat;
   animation: paw-fade 1.4s ease-out forwards;
 }

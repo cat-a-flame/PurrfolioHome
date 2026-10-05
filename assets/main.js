@@ -118,30 +118,29 @@
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Paw prints trail the pointer over the 404 page and the footer. Only for
-  // mouse/trackpad users who haven't asked for reduced motion.
-  var trailAreas = document.querySelectorAll('[data-paw-trail], .footer');
-  if (trailAreas.length && window.matchMedia &&
-      matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var lastX = null, lastY = 0, step = 0;
-    var dropPaw = function (e) {
+  // Paw prints trail the mouse across the page. Kept cheap: one passive
+  // listener, a print only every 44px of travel, an opacity-only fade, and at
+  // most 20 prints alive at once. Skipped for touch and reduced motion.
+  if (window.matchMedia && matchMedia('(pointer: fine)').matches &&
+      !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var lastX = null, lastY = 0, step = 0, live = 0;
+    document.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
       if (lastX === null) { lastX = e.clientX; lastY = e.clientY; return; }
       var dx = e.clientX - lastX, dy = e.clientY - lastY;
-      if (dx * dx + dy * dy < 44 * 44) return;
+      if (dx * dx + dy * dy < 44 * 44 || live >= 20) return;
       var angle = Math.atan2(dy, dx), side = step++ % 2 ? 7 : -7;
       var x = e.clientX - Math.sin(angle) * side, y = e.clientY + Math.cos(angle) * side;
       var paw = document.createElement('span');
       paw.className = 'paw-print';
       paw.setAttribute('aria-hidden', 'true');
       paw.style.transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + (angle * 180 / Math.PI + 90) + 'deg)';
-      paw.addEventListener('animationend', function () { paw.remove(); });
+      paw.addEventListener('animationend', function () { paw.remove(); live--; });
       document.body.appendChild(paw);
+      live++;
       lastX = e.clientX; lastY = e.clientY;
-    };
-    trailAreas.forEach(function (area) {
-      area.addEventListener('pointermove', dropPaw);
-      area.addEventListener('pointerleave', function () { lastX = null; });
-    });
+    }, { passive: true });
+    document.documentElement.addEventListener('pointerleave', function () { lastX = null; });
   }
 
   // A hello for anyone who opens the dev tools.
