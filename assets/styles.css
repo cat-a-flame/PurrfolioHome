@@ -516,6 +516,20 @@ p { margin: 0; }
 .float-badge small { display: block; color: var(--text-muted); font-weight: 600; font-size: 0.72rem; }
 .float-badge .ico { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; font-size: 1.05rem; background: var(--bg-c); }
 .float-badge.one { top: 14%; left: -2%; animation-delay: -2s; }
+
+/* A cat peeking over the net-worth badge, paws hooked on its top edge */
+.peek-cat {
+  position: absolute; left: 26px; bottom: calc(100% - 9px); width: 62px; height: auto; overflow: visible;
+  stroke: #2b2350; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round;
+}
+.peek-face, .peek-ear, .peek-paw { fill: #fff; }
+.peek-ear.patch { fill: #f6b93b; }
+.peek-cheek { fill: #f9a8c9; stroke: none; }
+.peek-eyes { fill: #2b2350; stroke: none; transform-box: fill-box; transform-origin: center; animation: peek-blink 5s infinite; }
+.peek-eyes .glint { fill: #fff; }
+.peek-nose { fill: #2b2350; stroke-width: 1; }
+.peek-toes { fill: none; stroke-width: 1.4; }
+@keyframes peek-blink { 0%, 90%, 100% { transform: scaleY(1); } 93% { transform: scaleY(0.1); } }
 .float-badge.two { bottom: 18%; right: -4%; animation-delay: -4s; }
 
 @media (max-width: 960px) {
