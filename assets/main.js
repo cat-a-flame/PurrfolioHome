@@ -1,5 +1,6 @@
 // Purrfolio landing site interactions: sticky nav, mobile menu, scroll reveals,
-// pointer-follow glow on feature tiles, the theme toggle, the phone preview tab bar, and the footer year.
+// pointer-follow glow on feature tiles, the theme toggle, the phone preview tab bar, the footer year,
+// and a couple of cat-shaped easter eggs.
 (function () {
   document.documentElement.classList.remove('no-js');
 
@@ -116,4 +117,36 @@
 
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
+
+  // Paw prints trail the pointer over the 404 page and the footer. Only for
+  // mouse/trackpad users who haven't asked for reduced motion.
+  var trailAreas = document.querySelectorAll('[data-paw-trail], .footer');
+  if (trailAreas.length && window.matchMedia &&
+      matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var lastX = null, lastY = 0, step = 0;
+    var dropPaw = function (e) {
+      if (lastX === null) { lastX = e.clientX; lastY = e.clientY; return; }
+      var dx = e.clientX - lastX, dy = e.clientY - lastY;
+      if (dx * dx + dy * dy < 44 * 44) return;
+      var angle = Math.atan2(dy, dx), side = step++ % 2 ? 7 : -7;
+      var x = e.clientX - Math.sin(angle) * side, y = e.clientY + Math.cos(angle) * side;
+      var paw = document.createElement('span');
+      paw.className = 'paw-print';
+      paw.setAttribute('aria-hidden', 'true');
+      paw.style.transform = 'translate(' + x + 'px,' + y + 'px) rotate(' + (angle * 180 / Math.PI + 90) + 'deg)';
+      paw.addEventListener('animationend', function () { paw.remove(); });
+      document.body.appendChild(paw);
+      lastX = e.clientX; lastY = e.clientY;
+    };
+    trailAreas.forEach(function (area) {
+      area.addEventListener('pointermove', dropPaw);
+      area.addEventListener('pointerleave', function () { lastX = null; });
+    });
+  }
+
+  // A hello for anyone who opens the dev tools.
+  if (window.console && console.log) {
+    console.log('%c🐾 Curious cat, huh?', 'font: 700 16px Nunito, sans-serif; color: #a78bfa');
+    console.log("We're hiring… just kidding, it's just me. Say hi at support@purrfolio.app");
+  }
 })();
