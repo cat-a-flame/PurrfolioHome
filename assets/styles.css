@@ -252,7 +252,7 @@ p { margin: 0; }
     opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity 0.2s, transform 0.2s;
   }
   .nav-links.is-open { opacity: 1; transform: none; pointer-events: auto; }
-  .nav-links a { padding: 12px 14px; }
+  .nav-links a { display: block; padding: 12px 14px; }
   .nav-links .btn { display: flex; justify-content: center; margin-top: 6px; margin-left: 0; padding: 14px; }
 }
 
