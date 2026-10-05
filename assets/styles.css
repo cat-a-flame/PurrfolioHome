@@ -4,9 +4,8 @@
    Lora display + Nunito body).
    ========================================================================== */
 
-/* Colour tokens. Dark is the default; the phone mockup always stays dark. */
-:root,
-.phone {
+/* Colour tokens. Dark is the default. */
+:root {
   --bg: #0a0614;
   --bg-2: #120b24;
   --surface: rgba(255, 255, 255, 0.04);
@@ -39,6 +38,8 @@
   --shadow: rgba(0, 0, 0, 0.8);
   --aurora-opacity: 1;
   --grain-opacity: 0.06;
+  --phone-screen: #0f0a1e;
+  --phone-card: rgba(255, 255, 255, 0.05);
 
   --gradient: linear-gradient(120deg, #6d28d9 0%, #a21caf 50%, #be185d 100%);
   --gradient-text: linear-gradient(100deg, #ffffff 0%, #d8c8ff 35%, #f9a8d4 75%, #fbbf24 110%);
@@ -84,6 +85,8 @@
   --shadow: rgba(60, 30, 110, 0.22);
   --aurora-opacity: 0.45;
   --grain-opacity: 0.03;
+  --phone-screen: #fbf9ff;
+  --phone-card: #ffffff;
 
   --gradient-text: linear-gradient(100deg, #2e1065 0%, #6d28d9 40%, #be185d 80%, #b45309 110%);
   --gradient-soft-text: linear-gradient(100deg, #6d28d9, #be185d);
@@ -313,7 +316,7 @@ p { margin: 0; }
   background: linear-gradient(145deg, #2a2147, #120b24);
   box-shadow:
     0 0 0 1.5px rgba(255,255,255,0.14),
-    0 50px 100px -30px rgba(0,0,0,0.85),
+    0 50px 100px -30px var(--shadow),
     inset 0 0 0 1px rgba(255,255,255,0.06);
   transform: rotateY(-14deg) rotateX(6deg) rotateZ(1deg);
   transform-style: preserve-3d;
@@ -326,7 +329,7 @@ p { margin: 0; }
 
 .phone-screen {
   position: relative; height: 100%; border-radius: 38px; overflow: hidden;
-  background: #0f0a1e; padding: 44px 14px 14px; display: flex; flex-direction: column; gap: 10px;
+  background: var(--phone-screen); padding: 44px 14px 14px; display: flex; flex-direction: column; gap: 10px;
 }
 .phone-notch { position: absolute; top: 12px; left: 50%; translate: -50% 0; width: 96px; height: 26px; border-radius: 20px; background: #000; z-index: 2; }
 
@@ -344,7 +347,7 @@ p { margin: 0; }
 .net-card .chip { flex: 1; background: rgba(255,255,255,0.14); border-radius: 12px; padding: 6px 8px; font-size: 0.7rem; }
 .net-card .chip b { display: block; font-size: 0.85rem; }
 
-.mini-card { background: rgba(var(--overlay), 0.05); border: 1px solid var(--border); border-radius: 16px; padding: 12px; }
+.mini-card { background: var(--phone-card); border: 1px solid var(--border); border-radius: 16px; padding: 12px; }
 .mini-card h5 { margin: 0 0 8px; font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-body); }
 
 .stack-bar { display: flex; height: 10px; border-radius: 99px; overflow: hidden; gap: 2px; }
