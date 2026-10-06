@@ -289,12 +289,10 @@ p { margin: 0; }
 /* ---------- Theme switch (day / night) ---------- */
 
 .theme-switch {
-  position: fixed; right: var(--gutter); bottom: var(--gutter); z-index: 60;
+  position: fixed; right: 24px; bottom: 24px; z-index: 60;
   width: 76px; height: 38px; padding: 0; border: 0; border-radius: 999px; cursor: pointer;
   background: none; box-shadow: 0 14px 30px -12px var(--shadow);
-  transition: transform 0.35s var(--ease-spring);
 }
-.theme-switch:hover { transform: translateY(-2px); }
 .theme-switch:focus-visible { outline-offset: 4px; border-radius: 999px; }
 
 .ts-track {
