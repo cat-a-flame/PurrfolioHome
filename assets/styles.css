@@ -293,11 +293,6 @@ p { margin: 0; }
   width: 76px; height: 38px; padding: 0; border: 0; border-radius: 999px; cursor: pointer;
   background: none; box-shadow: 0 14px 30px -12px var(--shadow);
 }
-/* Measure from the top against the small viewport height so the switch doesn't
-   ride up and down as mobile browser toolbars collapse and expand on scroll. */
-@supports (height: 100svh) {
-  .theme-switch { top: calc(100svh - 38px - 24px); bottom: auto; }
-}
 .theme-switch:focus-visible { outline-offset: 4px; border-radius: 999px; }
 
 .ts-track {
