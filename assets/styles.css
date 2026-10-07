@@ -843,8 +843,6 @@ p { margin: 0; }
 .help-contact h2 { font-size: 1.8rem; }
 .help-contact p { margin: 12px auto 0; max-width: 560px; }
 .help-contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
-.help-contact .help-contact-note { margin-top: 20px; font-size: 0.88rem; color: var(--text-muted); }
-.help-contact-note a { color: var(--violet); text-underline-offset: 3px; }
 
 
 .steps-list { counter-reset: s; list-style: none; padding: 0 !important; }
