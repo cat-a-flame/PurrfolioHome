@@ -148,60 +148,15 @@
 
       <section class="help-contact reveal" id="contact">
         <h2>Still stuck?</h2>
-        <p>Found a bug? Tell us about it and it lands straight with the developer. For anything else, send an email or say hi on Discord. We usually reply within 1–2 business days. Please never send us your password.</p>
+        <p>Found a bug? Report it on our Discord server, where you can also ask questions and share ideas. You can always email us too. We usually reply within 1–2 business days. Please never send us your password.</p>
         <div class="help-contact-actions">
-          <button class="btn btn-primary" type="button" data-open-bug-report><span aria-hidden="true">🐞</span>Report a bug</button>
+          <a class="btn btn-primary" href="https://discord.gg/PWwK8bvvQa"><span aria-hidden="true">🐞</span>Report a bug on Discord</a>
           <a class="btn btn-ghost" href="mailto:support@purrfolio.app"><span aria-hidden="true">✉️</span>support@purrfolio.app</a>
-          <a class="btn btn-ghost" href="https://discord.gg/PWwK8bvvQa"><span aria-hidden="true">💬</span>Discord</a>
         </div>
       </section>
     </div>
   </main>
 
-  <dialog class="bug-dialog" id="bug-dialog" aria-labelledby="bug-title">
-    <form class="bug-form" method="dialog" novalidate>
-      <div class="bug-head">
-        <span class="bug-emoji" aria-hidden="true">🐞</span>
-        <div>
-          <h2 id="bug-title">Report a bug</h2>
-          <p>Tell us what happened and what you expected instead.</p>
-        </div>
-        <button class="bug-close" type="button" data-close aria-label="Close">×</button>
-      </div>
-
-      <label class="bug-label" for="bug-where">Where did it happen?</label>
-      <select id="bug-where" name="where">
-        <option value="android">Android app</option>
-        <option value="web">Web app (my.purrfolio.app)</option>
-        <option value="website">This website</option>
-      </select>
-
-      <label class="bug-label" for="bug-message">What went wrong? <span aria-hidden="true">*</span></label>
-      <textarea id="bug-message" name="message" rows="5" maxlength="4000" required></textarea>
-
-      <label class="bug-check">
-        <input type="checkbox" name="canContact" id="bug-can-contact">
-        <span>You can contact me by email for more details</span>
-      </label>
-      <div class="bug-email" hidden>
-        <label class="bug-label" for="bug-email">Your email</label>
-        <input type="email" id="bug-email" name="email" maxlength="200" autocomplete="email">
-      </div>
-
-      <div class="bug-trap" aria-hidden="true">
-        <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-      </div>
-
-      <p class="bug-error" role="alert" hidden></p>
-      <p class="bug-hint">Your browser details are sent with the report to help us reproduce it.</p>
-
-      <div class="bug-actions">
-        <button class="btn btn-ghost btn-sm" type="button" data-close>Cancel</button>
-        <button class="btn btn-primary btn-sm" type="submit">Send report</button>
-      </div>
-    </form>
-  </dialog>
-  <div class="toast" role="status" aria-live="polite" hidden></div>
 
   <footer class="footer">
     <div class="container">
