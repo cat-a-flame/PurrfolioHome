@@ -143,6 +143,92 @@
     document.documentElement.addEventListener('pointerleave', function () { lastX = null; });
   }
 
+  // Support page bug report: a dialog that posts to the report-bug Netlify
+  // function, which forwards it to Discord (the webhook URL stays server-side).
+  var bugDialog = document.getElementById('bug-dialog');
+  if (bugDialog && bugDialog.showModal) {
+    var bugForm = bugDialog.querySelector('form');
+    var bugMessage = bugForm.elements.message;
+    var bugContact = bugForm.elements.canContact;
+    var bugEmailRow = bugForm.querySelector('.bug-email');
+    var bugError = bugForm.querySelector('.bug-error');
+    var bugSubmit = bugForm.querySelector('[type="submit"]');
+    var toast = document.querySelector('.toast');
+    var toastTimer;
+
+    var showBugError = function (text) {
+      bugError.textContent = text;
+      bugError.hidden = !text;
+    };
+    var showToast = function (text) {
+      if (!toast) return;
+      toast.textContent = text;
+      toast.hidden = false;
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.hidden = true; }, 4000);
+    };
+
+    document.querySelectorAll('[data-open-bug-report]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        bugForm.reset();
+        bugEmailRow.hidden = true;
+        showBugError('');
+        bugDialog.showModal();
+        bugMessage.focus();
+      });
+    });
+    bugDialog.querySelectorAll('[data-close]').forEach(function (btn) {
+      btn.addEventListener('click', function () { bugDialog.close(); });
+    });
+    // Clicking the backdrop (outside the form) closes the dialog.
+    bugDialog.addEventListener('click', function (e) {
+      if (e.target === bugDialog) bugDialog.close();
+    });
+    bugForm.addEventListener('input', function () { showBugError(''); });
+    bugContact.addEventListener('change', function () {
+      bugEmailRow.hidden = !bugContact.checked;
+      if (bugContact.checked) bugForm.elements.email.focus();
+    });
+
+    bugForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var message = bugMessage.value.trim();
+      var email = bugForm.elements.email.value.trim();
+      if (!message) { showBugError('Please describe what went wrong.'); bugMessage.focus(); return; }
+      if (bugContact.checked && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showBugError('Please enter your email so we can get back to you.');
+        bugForm.elements.email.focus();
+        return;
+      }
+      showBugError('');
+      bugSubmit.disabled = true;
+      bugSubmit.textContent = 'Sending…';
+      fetch('/api/report-bug', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: message,
+          where: bugForm.elements.where.value,
+          canContact: bugContact.checked,
+          email: bugContact.checked ? email : '',
+          website: bugForm.elements.website.value
+        })
+      }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again, or email us.');
+        });
+      }).then(function () {
+        bugDialog.close();
+        showToast('Thanks! Your report was sent.');
+      }).catch(function (err) {
+        showBugError(err.message === 'Failed to fetch' ? 'Could not reach the server. Check your connection and try again.' : err.message);
+      }).then(function () {
+        bugSubmit.disabled = false;
+        bugSubmit.textContent = 'Send report';
+      });
+    });
+  }
+
   // A hello for anyone who opens the dev tools.
   if (window.console && console.log) {
     console.log('%c🐾 Curious cat, huh?', 'font: 700 16px Nunito, sans-serif; color: #a78bfa');

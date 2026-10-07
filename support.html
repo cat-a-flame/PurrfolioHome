@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Support — Purrfolio</title>
-  <meta name="description" content="Get help with Purrfolio — contact us, troubleshooting and common questions.">
+  <title>Support · Purrfolio</title>
+  <meta name="description" content="Get help with Purrfolio: common questions, troubleshooting, reporting a bug and how to reach us.">
   <meta name="theme-color" content="#0a0614">
   <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)})();</script>
   <link rel="icon" type="image/png" href="assets/logo.png">
@@ -43,75 +43,165 @@
       <div class="container reveal">
         <span class="kicker">Help centre</span>
         <h1>How can we help?</h1>
-        <p>Stuck? Don't worry — even cats get stuck in trees. We usually reply within 1–2 business days.</p>
+        <p>Stuck? Even cats get stuck in trees sometimes. Find your answer below, or get in touch.</p>
+        <nav class="help-jump" aria-label="Help topics">
+          <a href="#getting-started">Getting started</a>
+          <a href="#using">Using Purrfolio</a>
+          <a href="#cost">Cost &amp; tips</a>
+          <a href="#account">Account &amp; privacy</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </section>
-    <div class="container">
-    <div class="support-grid">
-  <a class="tile reveal" href="mailto:support@purrfolio.app">
-    <div class="tile-icon" style="--bg-c: rgba(167,139,250,.18)">✉️</div>
-    <h3>Email us</h3>
-    <p>support@purrfolio.app<br>Bugs, questions, feature ideas — all welcome.</p>
-  </a>
-  <a class="tile reveal" style="--d:.08s" href="privacy.html">
-    <div class="tile-icon" style="--bg-c: rgba(52,211,153,.18)">🔒</div>
-    <h3>Privacy</h3>
-    <p>How we handle and protect your data.</p>
-  </a>
-  <a class="tile reveal" style="--d:.16s" href="delete-account.html">
-    <div class="tile-icon" style="--bg-c: rgba(244,114,182,.18)">🗑️</div>
-    <h3>Delete account</h3>
-    <p>Remove your account and all of its data.</p>
-  </a>
-</div>
 
-<div class="prose center reveal">
-  <h2 id="getting-started">Getting started</h2>
-  <h3>How do I create an account?</h3>
-  <p>Open Purrfolio, tap <strong>Sign up</strong> and enter your email and a password. Check your inbox for a confirmation email and tap the link to activate your account.</p>
-  <h3>How do I add my first account?</h3>
-  <p>Go to <strong>Settings → Accounts</strong> and tap <strong>Add account</strong>. Choose a type (bank, cash, savings, credit card, investment, bond, crypto…), a currency and a starting balance.</p>
-  <h3>How do I record an expense?</h3>
-  <p>Tap the <strong>+</strong> button, choose <em>Expense</em>, <em>Income</em> or <em>Transfer</em>, fill in the amount, account and category, and save. You can add notes, a payer and labels too.</p>
+    <div class="container help">
+      <section class="help-section reveal" id="getting-started">
+        <h2><span class="ico" aria-hidden="true">🐾</span>Getting started</h2>
+        <div class="faq">
+          <details>
+            <summary>How do I create an account?</summary>
+            <p>Open Purrfolio, tap <strong>Sign up</strong> and enter your email and a password. Check your inbox for a confirmation email and tap the link to activate your account.</p>
+          </details>
+          <details>
+            <summary>How do I add my first account?</summary>
+            <p>Go to <strong>Settings → Accounts</strong> and tap <strong>Add account</strong>. Choose a type (bank, cash, savings, credit card, investment, bond, crypto…), a currency and a starting balance.</p>
+          </details>
+          <details>
+            <summary>How do I record an expense?</summary>
+            <p>Tap the <strong>+</strong> button, choose <em>Expense</em>, <em>Income</em> or <em>Transfer</em>, fill in the amount, account and category, and save. You can add notes, a payer and labels too.</p>
+          </details>
+        </div>
+      </section>
 
-  <h2 id="features">Using Purrfolio</h2>
-  <h3>How do planned (recurring) payments work?</h3>
-  <p>Open <strong>Planned payments</strong> and add a payment with its amount, account, category and frequency. When a payment is due, Purrfolio highlights it so you can confirm it with one tap — it's then logged as a real transaction.</p>
-  <h3>How do I import transactions from a CSV file?</h3>
-  <p>Go to <strong>Settings → Import</strong> and choose your CSV file. Purrfolio detects the delimiter, date and amount formats; you then map columns, accounts and categories and preview the rows before importing. The file is processed on your device.</p>
-  <h3>Why don't my totals match my bank exactly?</h3>
-  <p>Check that each account's starting balance is correct and that all transactions (including transfers) are recorded. Totals in other currencies are converted using daily reference exchange rates, which can differ slightly from your bank's rates.</p>
-  <h3>How do I hide my balances?</h3>
-  <p>On the Dashboard, tap the eye icon next to the title to hide or show all amounts.</p>
+      <section class="help-section reveal" id="using">
+        <h2><span class="ico" aria-hidden="true">🧶</span>Using Purrfolio</h2>
+        <div class="faq">
+          <details>
+            <summary>How do planned (recurring) payments work?</summary>
+            <p>Open <strong>Planned payments</strong> and add a payment with its amount, account, category and frequency. When a payment is due, Purrfolio highlights it so you can confirm it with one tap. It's then logged as a real transaction.</p>
+          </details>
+          <details>
+            <summary>How do I import transactions from a CSV file?</summary>
+            <p>Go to <strong>Settings → Import</strong> and choose your CSV file. Purrfolio detects the delimiter, date and amount formats. You then map columns, accounts and categories and preview the rows before importing. The file is processed on your device.</p>
+          </details>
+          <details>
+            <summary>Why don't my totals match my bank exactly?</summary>
+            <p>Check that each account's starting balance is correct and that all transactions (including transfers) are recorded. Totals in other currencies are converted using daily reference exchange rates, which can differ slightly from your bank's rates.</p>
+          </details>
+          <details>
+            <summary>How do I hide my balances?</summary>
+            <p>On the Dashboard, tap the eye icon next to the title to hide or show all amounts.</p>
+          </details>
+        </div>
+      </section>
 
-  <h2 id="tips">Cost &amp; tips</h2>
-  <h3>Does Purrfolio cost anything?</h3>
-  <p>No. Purrfolio is free, with no subscriptions and no paid features. If you'd like to support it, you can leave a tip. Tips are a thank-you only: they don't unlock features or add anything extra.</p>
-  <h3>Can I get a tip refunded?</h3>
-  <p>Tips are processed by Google Play, so refunds are requested through Google Play under its refund policy. If you run into trouble, email us with your order number (it starts with <em>GPA.</em>) and we'll help.</p>
+      <section class="help-section reveal" id="cost">
+        <h2><span class="ico" aria-hidden="true">🐟</span>Cost &amp; tips</h2>
+        <div class="faq">
+          <details>
+            <summary>Does Purrfolio cost anything?</summary>
+            <p>No. Purrfolio is free, with no subscriptions and no paid features. If you'd like to support it, you can leave a tip. Tips are a thank-you only: they don't unlock features or add anything extra.</p>
+          </details>
+          <details>
+            <summary>Can I get a tip refunded?</summary>
+            <p>Tips are processed by Google Play, so refunds are requested through Google Play under its refund policy. If you run into trouble, email us with your order number (it starts with <em>GPA.</em>) and we'll help.</p>
+          </details>
+        </div>
+      </section>
 
-  <h2 id="troubleshooting">Troubleshooting</h2>
-  <ul>
-    <li><strong>I didn't receive the confirmation email.</strong> Check your spam folder, then wait a few minutes and try again. Still nothing? Email us.</li>
-    <li><strong>I forgot my password.</strong> Email us from your registered address and we'll help you regain access.</li>
-    <li><strong>My data isn't showing up on another device.</strong> Make sure you're signed in with the same email on both devices and that you're online, then pull to refresh or restart the app.</li>
-    <li><strong>The app looks broken or won't load.</strong> Update to the latest version from Google Play and restart the app.</li>
-  </ul>
+      <section class="help-section reveal" id="account">
+        <h2><span class="ico" aria-hidden="true">🔒</span>Account &amp; privacy</h2>
+        <div class="faq">
+          <details>
+            <summary>How do I delete my account?</summary>
+            <p>Open your <strong>profile settings</strong> in the app, tap <strong>Delete account</strong> and confirm. Can't get into the app? The <a href="delete-account.html">account deletion page</a> explains the other options.</p>
+          </details>
+          <details>
+            <summary>How is my data handled?</summary>
+            <p>Your data is encrypted in transit, only you can access your records, and it's never sold or used for ads. The <a href="privacy.html">Privacy Policy</a> has all the details.</p>
+          </details>
+        </div>
+      </section>
 
-  <h2 id="report">Reporting a bug</h2>
-  <p>You can report a bug right from the <a href="https://my.purrfolio.app">web app</a>:</p>
-  <ol>
-    <li>Sign in and click the <strong>🐞 Report a bug</strong> button in the bottom-right corner;</li>
-    <li>Describe what you were trying to do and what happened instead;</li>
-    <li>Tick <strong>You can contact me by email for more details</strong> if you're happy for us to follow up;</li>
-    <li>Click <strong>Send report</strong>.</li>
-  </ol>
-  <p>Your email, the page you were on and your browser are sent along with the report to help us reproduce the problem.</p>
-  <p>Please never send us your password.</p>
-</div>
+      <section class="help-section reveal" id="troubleshooting">
+        <h2><span class="ico" aria-hidden="true">🧰</span>Troubleshooting</h2>
+        <div class="faq">
+          <details>
+            <summary>I didn't receive the confirmation email.</summary>
+            <p>Check your spam folder, then wait a few minutes and try again. Still nothing? Email us.</p>
+          </details>
+          <details>
+            <summary>I forgot my password.</summary>
+            <p>Email us from your registered address and we'll help you get back in.</p>
+          </details>
+          <details>
+            <summary>My data isn't showing up on another device.</summary>
+            <p>Make sure you're signed in with the same email on both devices and that you're online, then pull to refresh or restart the app.</p>
+          </details>
+          <details>
+            <summary>The app looks broken or won't load.</summary>
+            <p>Update to the latest version from Google Play and restart the app. If it still happens, please report a bug below.</p>
+          </details>
+        </div>
+      </section>
 
+      <section class="help-contact reveal" id="contact">
+        <h2>Still stuck?</h2>
+        <p>Found a bug? Tell us about it and it lands straight with the developer. For anything else, send an email or say hi on Discord. We usually reply within 1–2 business days. Please never send us your password.</p>
+        <div class="help-contact-actions">
+          <button class="btn btn-primary" type="button" data-open-bug-report><span aria-hidden="true">🐞</span>Report a bug</button>
+          <a class="btn btn-ghost" href="mailto:support@purrfolio.app"><span aria-hidden="true">✉️</span>support@purrfolio.app</a>
+          <a class="btn btn-ghost" href="https://discord.gg/PWwK8bvvQa"><span aria-hidden="true">💬</span>Discord</a>
+        </div>
+      </section>
     </div>
   </main>
+
+  <dialog class="bug-dialog" id="bug-dialog" aria-labelledby="bug-title">
+    <form class="bug-form" method="dialog" novalidate>
+      <div class="bug-head">
+        <span class="bug-emoji" aria-hidden="true">🐞</span>
+        <div>
+          <h2 id="bug-title">Report a bug</h2>
+          <p>Tell us what happened and what you expected instead.</p>
+        </div>
+        <button class="bug-close" type="button" data-close aria-label="Close">×</button>
+      </div>
+
+      <label class="bug-label" for="bug-where">Where did it happen?</label>
+      <select id="bug-where" name="where">
+        <option value="android">Android app</option>
+        <option value="web">Web app (my.purrfolio.app)</option>
+        <option value="website">This website</option>
+      </select>
+
+      <label class="bug-label" for="bug-message">What went wrong? <span aria-hidden="true">*</span></label>
+      <textarea id="bug-message" name="message" rows="5" maxlength="4000" required></textarea>
+
+      <label class="bug-check">
+        <input type="checkbox" name="canContact" id="bug-can-contact">
+        <span>You can contact me by email for more details</span>
+      </label>
+      <div class="bug-email" hidden>
+        <label class="bug-label" for="bug-email">Your email</label>
+        <input type="email" id="bug-email" name="email" maxlength="200" autocomplete="email">
+      </div>
+
+      <div class="bug-trap" aria-hidden="true">
+        <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+
+      <p class="bug-error" role="alert" hidden></p>
+      <p class="bug-hint">Your browser details are sent with the report to help us reproduce it.</p>
+
+      <div class="bug-actions">
+        <button class="btn btn-ghost btn-sm" type="button" data-close>Cancel</button>
+        <button class="btn btn-primary btn-sm" type="submit">Send report</button>
+      </div>
+    </form>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite" hidden></div>
 
   <footer class="footer">
     <div class="container">
