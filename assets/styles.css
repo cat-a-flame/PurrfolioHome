@@ -521,7 +521,7 @@ p { margin: 0; }
   .hero-lead { margin: 0 auto; }
   .hero-ctas, .hero-meta { justify-content: center; }
   .phone-stage { margin-top: 20px; }
-  .phone { transform: none; }
+  .phone { transform: none; text-align: left; }
   .float-badge.one { left: 0; }
   .float-badge.two { right: 0; }
 }
