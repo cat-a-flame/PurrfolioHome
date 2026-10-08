@@ -560,7 +560,6 @@ p { margin: 0; }
 .tile:hover::before { opacity: 1; }
 .tile.wide { grid-column: span 4; }
 .tile.half { grid-column: span 3; }
-.tile.full { grid-column: 1 / -1; }
 
 .tile-icon {
   width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; font-size: 1.5rem;
