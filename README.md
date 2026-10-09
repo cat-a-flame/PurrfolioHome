@@ -26,5 +26,5 @@ extension-less aliases (`/privacy`, `/terms`, `/support`, `/delete-account`).
 
 ## Before launch
 
-- Replace `purrfolioapp@proton.me` / `purrfolioapp@proton.me` with real inboxes.
+- Contact addresses: `meow@purrfolio.app` (general) and `support@purrfolio.app` (bugs/support).
 - Point the Google Play buttons (`href="#download"`) at the real store listings.

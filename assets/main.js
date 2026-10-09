@@ -131,6 +131,6 @@
   // A hello for anyone who opens the dev tools.
   if (window.console && console.log) {
     console.log('%c🐾 Curious cat, huh?', 'font: 700 16px Nunito, sans-serif; color: #a78bfa');
-    console.log("We're hiring… just kidding, it's just me. Say hi at purrfolioapp@proton.me");
+    console.log("We're hiring… just kidding, it's just me. Say hi at meow@purrfolio.app");
   }
 })();
