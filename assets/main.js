@@ -1,4 +1,4 @@
-// Purrfolio landing site interactions: sticky nav, mobile menu, scroll reveals,
+// Purrfolio landing site interactions: sticky nav, scroll reveals,
 // pointer-follow glow on feature tiles, the theme toggle, the phone preview tab bar, the footer year,
 // and a couple of cat-shaped easter eggs.
 (function () {
@@ -10,21 +10,6 @@
   }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
-
-  var toggle = document.querySelector('.nav-toggle');
-  var links = document.getElementById('nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      var open = links.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-    links.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        links.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
 
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
