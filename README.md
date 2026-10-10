@@ -10,6 +10,7 @@ Plain HTML/CSS/JS — no build step.
 | Terms of Use | `/terms.html` | EULA / terms link |
 | Support | `/support.html` | Support URL |
 | Delete account | `/delete-account.html` | Google Play "account deletion" URL |
+| Testers | `/testers.html` | Closed-testing signup (not indexed; set the opt-in link) |
 | Not found | `/404.html` | Netlify / GitHub Pages 404 |
 
 ## Run locally
