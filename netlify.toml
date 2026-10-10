@@ -26,6 +26,11 @@
   to = "/delete-account.html"
   status = 200
 
+[[redirects]]
+  from = "/testers"
+  to = "/testers.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
