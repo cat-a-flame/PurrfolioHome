@@ -828,6 +828,9 @@ p { margin: 0; }
   display: grid; place-items: center; font-weight: 900; color: #fff; background: var(--gradient);
 }
 
+.steps-list-spaced li { margin-bottom: 32px; }
+.steps-list-spaced .btn { margin-top: 12px; }
+
 /* ---------- Reveal animations ---------- */
 
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); transition-delay: var(--d, 0s); }
