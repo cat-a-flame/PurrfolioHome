@@ -10,7 +10,6 @@ Plain HTML/CSS/JS — no build step.
 | Terms of Use | `/terms.html` | EULA / terms link |
 | Support | `/support.html` | Support URL |
 | Delete account | `/delete-account.html` | Google Play "account deletion" URL |
-| Testers | `/testers.html` | Closed-testing signup (not indexed; set the opt-in link) |
 | Not found | `/404.html` | Netlify / GitHub Pages 404 |
 
 ## Run locally
@@ -28,4 +27,3 @@ extension-less aliases (`/privacy`, `/terms`, `/support`, `/delete-account`).
 ## Before launch
 
 - Contact addresses: `meow@purrfolio.app` (general) and `support@purrfolio.app` (bugs/support).
-- Point the Google Play buttons (`href="#download"`) at the real store listings.
